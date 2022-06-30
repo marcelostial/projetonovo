@@ -1,0 +1,96 @@
+/* #input{
+    margin: 8%;
+} */
+label {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: flex-end;
+  color: #767676;
+  margin-bottom: 4px;
+}
+
+input {
+  cursor: pointer;
+  width: 330px;
+  height: 40px;
+  padding-left: 1%;
+  box-sizing: border-box;
+  background: #ffffff;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  border: 2px solid #aaaaaa;
+  border-radius: 4px;
+}
+
+input::-webkit-input-placeholder {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #767676;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+input:focus {
+  padding-left: 1%;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #767676;
+  border: 2px solid #aaaaaa;
+  outline: none;
+}
+
+input::after{
+  font-family: "Nunito";
+  font-style: normal;
+}
+input:optional {
+  border: 2px solid #aaaaaa;
+}
+input:required:focus:valid {
+  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg")
+    no-repeat 95% 50% rgb(221, 231, 221);
+  background-size: 25px;
+  border-color: 2px solid #aaaaaa;
+}
+input:focus:invalid {
+  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg")
+    no-repeat 95% 50% rgb(255, 224, 224);
+  background-size: 25px;
+  border: 2px solid #684848;
+}
+
+p {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #ff4b4b;
+}
+
+p#ageP{
+  display: none;
+} 
+
+p#ageOk{
+  display: block;
+} 

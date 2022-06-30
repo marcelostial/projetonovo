@@ -1,0 +1,16 @@
+.content-sucess {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  align-items: center;
+}
+
+#button-modal{
+    display: flex;
+    margin-top: 30%;
+}
+
+a{
+    text-decoration: none;
+}

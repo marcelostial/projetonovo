@@ -1,0 +1,43 @@
+button#form {
+  width: 81px;
+  height: 40px;
+  left: 670px;
+  top: 941px;
+
+  background: #0dbdbd;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+button#sucess {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+  gap: 6px;
+  outline: none;
+  border: 0;
+  width: 269px;
+  height: 177px;
+  cursor: pointer;
+  background: #0dbdbd;
+  border-radius: 10px;
+
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 18px;
+  color: white;
+}
+
