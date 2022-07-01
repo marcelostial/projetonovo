@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 6%;
   width: 100%;
 }
 
@@ -64,20 +64,21 @@ Input#name{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 15%;
+
 }
 
 .modal-finally{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 15%;
 }
 .email{
   margin: 2% 1% 1% 8%;
 }
 
 .password{
-  margin: 2% 1% 1% 8%;
+  margin: 4% 1% 1% 8%;
 }
 
 Input#phone{
@@ -92,6 +93,26 @@ Input#birthday{
   width: 162px;
 }
 .birthday{
-  margin: 2% 1% 1% 2%;
+  margin: 4% 1% 1% 2%;
 }
 
+#ageId{
+  position: absolute;
+  left: 64%;
+  margin: 0;
+}
+
+#age-modal{
+  position: relative;
+}
+
+#check-modal{
+  position: relative;
+  width: 100%;
+}
+
+#checkId{
+  position: absolute;
+  left: 9%;
+  bottom: 21%;
+}

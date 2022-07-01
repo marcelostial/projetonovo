@@ -1,4 +1,4 @@
-.custum-checkbox  #checkbox-label {
+.custum-checkbox #checkbox-label {
   font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
@@ -8,10 +8,7 @@
   margin: 0;
 }
 
-p#checkbox{
-  display: none;
-}
-.modal-checkbox{
+.modal-checkbox {
   display: flex;
   flex-direction: column;
   margin-left: 9%;
@@ -23,36 +20,33 @@ p#checkbox{
   gap: 2%;
   align-items: center;
 }
-.custum-checkbox input{
+.custum-checkbox input {
   box-sizing: border-box;
   width: 20px;
   height: 20px;
-  
+
   /* Inside auto layout */
-  
-  
+
   flex: none;
   order: 0;
   flex-grow: 0;
 }
 
-.custum-checkbox input:checked{
+.custum-checkbox input:checked {
   appearance: none;
   background-image: url(../../assents/Check.svg);
   background-position: center;
-  border: 2px solid #0DBDBD;
-  border-radius: 2pxrgb(244, 248, 248);
-  
+  border: 2px solid #0dbdbd;
+  border-radius: 2pxrgb (244, 248, 248);
 }
 
-.custum-checkbox input:hover{
+.custum-checkbox input:hover {
   background-image: url(../../assents/Check.svg);
   border: 2px solid #7ae9e9;
   clip-path: white;
-  border-radius: 2pxrgb(244, 248, 248);
+  border-radius: 2pxrgb (244, 248, 248);
   outline-style: none;
 }
 .custum-checkbox input:after {
   display: block;
-
 }

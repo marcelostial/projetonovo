@@ -75,6 +75,8 @@ input:focus:invalid {
 }
 
 p {
+  margin-top: 8px;
+  position: absolute;
   font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
@@ -87,10 +89,3 @@ p {
   color: #ff4b4b;
 }
 
-p#ageP{
-  display: none;
-} 
-
-p#ageOk{
-  display: block;
-} 

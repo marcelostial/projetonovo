@@ -5,10 +5,11 @@ import Logo from "../../assents/logoInternSingUp.png";
 import Input from "../../components/Input";
 import Checkbox from "../../components/Checkbox";
 import Button from "../../components/Button";
+import Select from "../../components/Select";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [accept, setAccpt] = React.useState(false);
+  const [checked, setChecked] = React.useState(true);
   const [ageValidate, setAgeValidate] = React.useState("false");
 
   const nav = useNavigate();
@@ -19,16 +20,9 @@ const Login = () => {
   const password = useForm("password");
   const name = useForm("name");
 
-  const [style, setStyle] = React.useState("ageP");
+  const [errorAge, setErrorAge] = React.useState(null);
+  const [errorCheckbox, setErrorCheckbox] = React.useState(null);
 
-  const changeStyle = () => {
-    console.log("to trocando");
-    setStyle("ageOk");
-  };
-
-  // const acceptLogicial = (e) => {
-  //   setAgeValidate;
-  // };
   const ageCalculation = (e) => {
     let birthday = parseInt(e.target.value.slice(0, 4));
     let date = new Date();
@@ -36,12 +30,26 @@ const Login = () => {
     let dateA = year - birthday;
     if (dateA < 120) {
       setAgeValidate("true");
+      setErrorAge(null);
     } else {
-      changeStyle();
       setAgeValidate("false");
+      setErrorAge("Age Invalid");
+    }
+    if (ageValidate === "false") {
+      setErrorAge("Age Invalid");
     }
   };
-
+  function handleChange({ target }) {
+    if (target.checked) {
+      setChecked(true);
+      setErrorCheckbox(null);
+      console.log("esta  checado");
+    } else {
+      setChecked(false);
+      console.log("esta  deschecado");
+      setErrorCheckbox("You most accept the therms");
+    }
+  }
   function handleSubmit(event) {
     event.preventDefault();
     if (
@@ -50,11 +58,16 @@ const Login = () => {
       phone.validate &&
       password.validate &&
       birthday.validate() &&
-      ageValidate === "true"
+      ageValidate === "true" &&
+      checked === true
     ) {
       nav("/Sucess");
+    }
+    if (checked === false) {
+      setErrorCheckbox("You most accept the therms");
     } else {
       console.log("Não enviar");
+      setErrorCheckbox("You most accept the therms");
     }
   }
 
@@ -103,27 +116,34 @@ const Login = () => {
                 required
                 {...password}
               />
-              <Input
+
+              {/* <Input
                 label="Birthday*"
                 id="birthday"
                 type="date"
                 onSelect={ageCalculation}
                 required
                 {...birthday}
-                error="Age Invalid"
-                idError={style}
+              /> */}
+
+              <Select
+                label="Birthday*"
+                id="birthday"
+                onSelect={ageCalculation}
+                required
               />
             </div>
+            <div id="age-modal">{errorAge && <p id="ageId">{errorAge}</p>}</div>
             <div className="modal-finally">
               <Checkbox
-                options={["I accept the terms and privacy"]}
-                value={accept}
-                setValue={setAccpt}
-                error="You most accept the therms"
-                idError="checkbox"
-                required={setAccpt}
+                value={["I accept the terms and privacy"]}
+                onChange={handleChange}
               />
               <Button text="Register" id="form" />
+              <div id="check-modal">
+                {" "}
+                {errorCheckbox && <p id="checkId">{errorCheckbox}</p>}
+              </div>
             </div>
           </form>
         </div>
