@@ -6,11 +6,28 @@
   align-items: center;
 }
 
-#button-modal{
-    display: flex;
-    margin-top: 30%;
+#button-modal {
+  display: flex;
+  margin-top: 30%;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 650px) {
+  .content-sucess {
+    margin-top: 50%;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 24px;
+  }
+
+  #button-modal {
+    margin-top: 5%;
+  }
+
 }

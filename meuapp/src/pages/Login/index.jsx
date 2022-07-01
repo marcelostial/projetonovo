@@ -15,7 +15,6 @@ const Login = () => {
   const nav = useNavigate();
 
   const email = useForm("email");
-  const birthday = useForm("birthday");
   const phone = useForm("phone");
   const password = useForm("password");
   const name = useForm("name");
@@ -57,14 +56,10 @@ const Login = () => {
       name.validate() &&
       phone.validate &&
       password.validate &&
-      birthday.validate() &&
       ageValidate === "true" &&
       checked === true
     ) {
       nav("/Sucess");
-    }
-    if (checked === false) {
-      setErrorCheckbox("You most accept the therms");
     } else {
       console.log("Não enviar");
       setErrorCheckbox("You most accept the therms");
