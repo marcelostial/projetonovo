@@ -11,7 +11,7 @@
   flex-direction: column;
 }
 
-.content-header{
+.content-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,14 +19,11 @@
   width: 100%;
 }
 
-
-.content-form{
+.content-form {
   display: flex;
   width: 100%;
   justify-content: center;
 }
-
-
 
 header {
   display: flex;
@@ -48,71 +45,125 @@ h1 {
   flex-grow: 0;
 }
 
-form{
-  width: 100%;
-}
-
-Input#name{
-  width: 515px;
-}
-
-.name{
-  margin: 8% 4% 4% 8%;
-}
-
-.modal-form{
+form {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
-.modal-finally{
+.name {
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+Input#name {
+  width: 515px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 5%;
+}
+
+.sidemodal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.modal-finally {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 15%;
 }
-.email{
-  margin: 2% 1% 1% 8%;
-}
 
-.password{
-  margin: 4% 1% 1% 8%;
-}
-
-Input#phone{
+Input#phone {
   width: 162px;
 }
 
-.phone{
-  margin: 2% 1% 1% 2%;
-}
-
-Input#birthday{
+Input#birthday {
   width: 162px;
 }
-.birthday{
-  margin: 4% 1% 1% 2%;
-}
 
-#ageId{
+#ageId {
   position: absolute;
-  left: 64%;
+  left: 423px;
+  bottom: 8px;
   margin: 0;
 }
 
-#age-modal{
-  position: relative;
-}
-
-#check-modal{
+#age-modal {
   position: relative;
   width: 100%;
 }
 
-#checkId{
+#check-modal {
+  position: relative;
+  width: 100%;
+}
+
+#checkId {
   position: absolute;
   left: 9%;
   bottom: 21%;
+}
+
+@media screen and (max-width: 650px) {
+  .main {
+    width: 100vw;
+    height: 100vh;
+  }
+  header {
+    align-items: center;
+    width: 60%;
+  }
+
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 0;
+  }
+
+  .name {
+    margin-left: 0;
+  }
+  Input#name {
+    width: 330px;
+  }
+
+  Input#phone {
+    width: 150px;
+    height: 40px;
+  }
+
+  Input#birthday {
+    width: 150px;
+    height: 40px;
+  }
+  .sidemodal-form {
+    flex-direction: row;
+  }
+
+  #ageId {
+    left: 280px;
+  }
+
+  .modal-finally {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  #checkId {
+    position: absolute;
+    left: 25%;
+    top: 5%;
+}
+
 }

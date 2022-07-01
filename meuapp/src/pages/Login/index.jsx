@@ -99,6 +99,16 @@ const Login = () => {
                 required
                 {...email}
               />
+
+              <Input
+                label="Password*"
+                id="password"
+                type="password"
+                required
+                {...password}
+              />
+            </div>
+            <div className="sidemodal-form">
               <Input
                 label="Phone*"
                 id="phone"
@@ -108,24 +118,6 @@ const Login = () => {
                 required
                 {...phone}
               />
-
-              <Input
-                label="Password*"
-                id="password"
-                type="password"
-                required
-                {...password}
-              />
-
-              {/* <Input
-                label="Birthday*"
-                id="birthday"
-                type="date"
-                onSelect={ageCalculation}
-                required
-                {...birthday}
-              /> */}
-
               <Select
                 label="Birthday*"
                 id="birthday"
